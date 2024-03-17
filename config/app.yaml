@@ -1,0 +1,29 @@
+name: test_app
+containers:
+  - type: central_panel
+    widgets:
+      - type: label
+        text: "My egui Application"
+      - type: horizontal_layout
+        widgets:
+          - type: label
+            text: "Your name: "
+            id: "name_label"
+          - type: text_edit
+            value: get_name
+            on_change: set_name
+            label_id: "name_label"
+      - type: slider
+        range:
+          start: 0
+          end: 120
+        text: "age"
+        value: get_age
+        on_change: set_age
+      - type: button
+        text: "Increment"
+        on_click: increment_age
+      - type: label
+        text: hello
+      - type: image
+        src: "./assets/ferris.png"
